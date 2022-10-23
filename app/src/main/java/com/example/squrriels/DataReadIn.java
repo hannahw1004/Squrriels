@@ -1,13 +1,12 @@
 package com.example.squrriels;
 
-/*import org.apache.poi.openxml4j.opc.OPCPackage;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,6 +16,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class DataReadIn {
+    public double emission = 0;
+    public String maker;
+    public String brand;
 
     public Context context;
     public DataReadIn(Context context) {
@@ -29,24 +31,22 @@ public class DataReadIn {
         try{
             InputStream myInput;
             AssetManager assetManager = context.getAssets();
-            myInput = assetManager.open("FuelEfficiency.xlsx");
+            myInput = assetManager.open("FuelEfficiency.xls");
+            POIFSFileSystem myFileSystem = new POIFSFileSystem(myInput);
 
-            OPCPackage pkg = OPCPackage.open(myInput);
+            HSSFWorkbook myWorkBook = new HSSFWorkbook(myFileSystem);
 
-            XSSFWorkbook myWorkBook = new XSSFWorkbook(pkg);
-
-            XSSFSheet mySheet = myWorkBook.getSheetAt(0);
+            HSSFSheet mySheet = myWorkBook.getSheetAt(0);
 
             Iterator<Row> rowIter = mySheet.rowIterator();
             int rowNum = 0;
 
             while(rowIter.hasNext()){
-                XSSFRow myRow = (XSSFRow) rowIter.next();
+                HSSFRow myRow = (HSSFRow) rowIter.next();
                 if(rowNum != 0){
-                    int colNum = 0;
-                    String brand = myRow.getCell(0).getStringCellValue();
-                    String maker = myRow.getCell(1).getStringCellValue();
-                    double emission = myRow.getCell(2).getNumericCellValue();
+                    brand = myRow.getCell(0).getStringCellValue();
+                    maker = myRow.getCell(1).getStringCellValue();
+                    emission = myRow.getCell(2).getNumericCellValue();
 
                     cars.add(new Car(brand, maker, emission));
                 }
@@ -57,4 +57,4 @@ public class DataReadIn {
             return null;
         }
     }
-} */
+}
