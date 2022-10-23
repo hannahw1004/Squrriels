@@ -1,5 +1,6 @@
 package com.example.squrriels;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View;
+import android.content.Intent;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +63,15 @@ public class ResultDead extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_result_dead, container, false);
+    }
+
+    public void goToSite (View view) {
+        goToUrl ( "https://acornfarm.000webhostapp.com/");
+    }
+
+    private void goToUrl (String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 }

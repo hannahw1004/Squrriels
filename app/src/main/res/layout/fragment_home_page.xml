@@ -11,20 +11,23 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/btn_track"
-        android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="340dp"
-        android:backgroundTint="#4E9258"
+        android:id="@+id/learnMore"
+        android:layout_width="197dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#835C3B"
         android:fontFamily="@font/baloo"
-        android:text="Track Emissions"
-        android:textSize="23dp"
-        app:cornerRadius="30dp"
+        android:text="LEARN MORE"
+        android:autoLink="web"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:onClick="goToSite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CalendarView
         android:id="@+id/calendarView"
