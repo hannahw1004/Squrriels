@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/happyFace"
         android:layout_width="424dp"
         android:layout_height="515dp"
         android:layout_marginBottom="50dp"
@@ -76,7 +76,7 @@
         android:text="Username"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/happyFace" />
 
     <Button
         android:id="@+id/btn_signup"
