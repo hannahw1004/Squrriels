@@ -11,4 +11,20 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kg">kg</string>
+    <string name="kgText3">kg</string>
+    <string name="learn_more">LEARN MORE</string>
+    <string name="congrats">Congrats!</string>
+    <string name="kgText1">kg</string>
+    <string name="methane">methane</string>
+    <string name="kgText2">kg</string>
+    <string name="nitrogen_oxide">nitrogen oxide</string>
+    <string name="you_emitted_a_total_of">You emitted a total of</string>
+    <string name="carbon_dioxide">carbon dioxide</string>
+    <string name="you_have_been_environmentally_friendly_with_your_gasoline_use">You have been environmentally friendly with your gasoline use!</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="the_greenhouse_gas_emission_from_your_drive_is_hurting_the_squirrels">The greenhouse gas emission from your drive is hurting the squirrels!</string>
+    <string name="oh_no">Oh no!</string>
+    <string name="todo3">TODO</string>
 </resources>
