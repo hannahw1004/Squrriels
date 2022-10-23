@@ -27,5 +27,14 @@
         android:id="@+id/inputMiles"
         android:name="com.example.squrriels.InputMiles"
         android:label="fragment_input_miles"
-        tools:layout="@layout/fragment_input_miles" />
+        tools:layout="@layout/fragment_input_miles" >
+        <action
+            android:id="@+id/action_inputMiles_to_resultHappy"
+            app:destination="@id/resultHappy" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultHappy"
+        android:name="com.example.squrriels.ResultHappy"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 </navigation>

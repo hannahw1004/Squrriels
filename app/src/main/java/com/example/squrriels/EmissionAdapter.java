@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class EmissionAdapter {
     private final DBHelper mDbHelper;
     private final SQLiteDatabase mDb;
-    private final String LOG_CLASS_NAME = "CarAdapter";
+    private final String LOG_CLASS_NAME = "EmissionAdapter";
 
     public EmissionAdapter(DBHelper dbHelper){
         mDbHelper = dbHelper;

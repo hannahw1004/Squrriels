@@ -11,13 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 
 public class InputMiles extends Fragment {
-    DataReadIn data = new DataReadIn(this.getActivity());
-    ArrayList<Car> cars = data.readCarData();
     double gallons = 0;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,32 +33,49 @@ public class InputMiles extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        DataReadIn data = new DataReadIn(this.getContext());
+        ArrayList<Car> cars = data.readCarData();
 
         view.findViewById(R.id.btn_submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //NavHostFragment.findNavController(InputMiles.this)
-                        //.navigate(R.id.action_logInPage_to_homePage);
+
+                NavHostFragment.findNavController(InputMiles.this)
+                        .navigate(R.id.action_inputMiles_to_resultHappy);
 
                 EditText txtCarBrand = getActivity().findViewById(R.id.txt_car_brand);
                 EditText txtCarModel = getActivity().findViewById(R.id.txt_car_model);
                 EditText txtMiles = getActivity().findViewById(R.id.txt_miles);
+                EditText txtDate = getActivity().findViewById(R.id.txt_year);
 
                 String brand = txtCarBrand.getEditableText().toString();
                 String model = txtCarModel.getEditableText().toString();
                 String miles = txtMiles.getEditableText().toString();
+
                 double mile = 0;
                 if(!miles.equals("")){
                     mile = Double.parseDouble(miles);
                 }
 
-                for(int i = 0; i <= cars.size(); i++){
+                for(int i = 0; i < cars.size(); i++){
                     Car currentCar = cars.get(i);
-                    if(brand.equals(currentCar.brand) && model.equals(currentCar.maker)){
+                    if(brand.equalsIgnoreCase(currentCar.brand) && model.equalsIgnoreCase(currentCar.maker)){
                         gallons = mile / currentCar.emission;
+                    }else{
+                        Snackbar.make(view, "Please write another car type", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
                     }
                 }
+                txtCarBrand.setText("");
+                txtCarModel.setText("");
+                txtMiles.setText("");
+                txtDate.setText("");
+
+
+//                    NavHostFragment.findNavController(InputMiles.this)
+//                            .navigate(R.id.action_inputMiles_to_resultHappy);
+
 
             }
         });
