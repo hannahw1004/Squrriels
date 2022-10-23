@@ -29,9 +29,12 @@ public class LogInPage extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.btn_signup).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                NavHostFragment.findNavController(LogInPage.this)
+                        .navigate(R.id.action_logInPage_to_homePage);
+
                 MainActivity mainActivity = (MainActivity) getActivity();
                 InsertUser insertUser = mainActivity.getmInsertUser();
 

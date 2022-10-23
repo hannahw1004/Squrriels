@@ -11,19 +11,20 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_track"
         android:layout_width="350dp"
         android:layout_height="80dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="#4E9258"
         android:fontFamily="@font/baloo"
         android:text="Track Emissions"
         android:textSize="23dp"
         app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -41,8 +42,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="114dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="100dp" />
 
     <TextView
         android:id="@+id/textView"
