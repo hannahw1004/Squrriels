@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Result">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-80dp"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="kg"
+        android:textColor="#4E9258"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kgText2"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <TextView
+        android:id="@+id/kgText1"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="kg"
+        android:textColor="#4E9258"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/kgText2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <TextView
+        android:id="@+id/kgText2"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/baloo"
+        android:text="kg"
+        android:textColor="#4E9258"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <TextView
+        android:id="@+id/nitrogenOxide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/baloo"
+        android:text="nitrogen oxide"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <TextView
+        android:id="@+id/carbonDioxide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="carbon dioxide"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="methane"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <TextView
+        android:id="@+id/resultStatement"
+        android:layout_width="205dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/baloo"
+        android:text="You have been environmentally friendly with your gasoline use!"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/learnMore"
+        android:layout_width="197dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#835C3B"
+        android:fontFamily="@font/baloo"
+        android:text="LEARN MORE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/emissionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/baloo"
+        android:text="You emitted a total of"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="325dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="268dp"
+        android:layout_height="608dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginEnd="-20dp"
+        android:fontFamily="@font/baloo"
+        android:src="@drawable/happyface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/baloo"
+        android:text="Congrats!"
+        android:textColor="#4E9258"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
