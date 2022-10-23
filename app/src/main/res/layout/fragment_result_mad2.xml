@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ResultHappy">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ResultMad">
 
-    <!-- TODO: Update blank fragment layout -->
+<!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="-80dp"
-        android:src="@drawable/background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/todo2" />
+<ImageView
+    android:id="@+id/background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-80dp"
+    android:src="@drawable/background"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    android:contentDescription="@string/todo2" />
 
     <TextView
         android:id="@+id/kgText3"
         android:layout_width="42dp"
         android:layout_height="37dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/baloo"
         android:text="@string/kgText3"
         android:textColor="#4E9258"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/nitrogenOxide"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toEndOf="@+id/kgText2" />
 
     <TextView
@@ -39,26 +40,28 @@
         android:layout_width="42dp"
         android:layout_height="37dp"
         android:layout_marginStart="10dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/baloo"
         android:text="@string/kgText1"
         android:textColor="#4E9258"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/carbonDioxide"
         app:layout_constraintEnd_toStartOf="@+id/kgText2"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/kgText2"
         android:layout_width="42dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/baloo"
         android:text="@string/kgText2"
         android:textColor="#4E9258"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/methane"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -67,12 +70,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="290dp"
+        android:layout_marginBottom="240dp"
         android:fontFamily="@font/baloo"
         android:text="@string/nitrogen_oxide"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
 
     <TextView
@@ -80,35 +84,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="230dp"
-        android:layout_marginBottom="290dp"
+        android:layout_marginBottom="240dp"
         android:fontFamily="@font/baloo"
         android:text="@string/carbon_dioxide"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/methane"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="290dp"
+        android:layout_marginBottom="240dp"
         android:fontFamily="@font/baloo"
         android:text="@string/methane"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nitrogenOxide"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
 
     <TextView
         android:id="@+id/resultStatement"
-        android:layout_width="205dp"
-        android:layout_height="175dp"
+        android:layout_width="213dp"
+        android:layout_height="151dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="150dp"
         android:fontFamily="@font/baloo"
-        android:text="@string/you_have_been_environmentally_friendly_with_your_gasoline_use"
+        android:text="@string/the_greenhouse_gas_emission_from_your_drive_is_hurting_the_squirrels"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +126,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="#835C3B"
         android:fontFamily="@font/baloo"
         android:text="@string/learn_more"
@@ -128,6 +134,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -135,43 +142,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="@font/baloo"
         android:text="@string/you_emitted_a_total_of"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultStatement" />
 
-    <ImageView
-        android:id="@+id/happyFace"
-        android:layout_width="268dp"
-        android:layout_height="608dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginEnd="-20dp"
-        android:fontFamily="@font/baloo"
-        android:src="@drawable/happyface"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
     <TextView
-        android:id="@+id/congrats"
+        android:id="@+id/messageMad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/baloo"
-        android:text="@string/congrats"
+        android:text="@string/oh_no"
         android:textColor="#4E9258"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="135dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/angryface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultStatement"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo3"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
