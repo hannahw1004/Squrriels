@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         mDbHelper = new DBHelper(getApplicationContext());
         mInsertUser = new InsertUser(mDbHelper);
+
+        DataReadIn data = new DataReadIn(this);
+        data.readCarData();
     }
 
     public InsertUser getmInsertUser(){return mInsertUser;}

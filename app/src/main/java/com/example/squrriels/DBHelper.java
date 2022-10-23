@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static class MileEntry implements BaseColumns {
 
         public static final String DATE_COL = "date";
-        public static final String MILES_COL = "miles";
+        public static final String GAS_COL = "gas";
     }
 
     public static class UserEntry implements BaseColumns {
@@ -27,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_MILES_ENTRIES =
             "CREATE TABLE " + TABLE_NAME_MILE + " (" + MileEntry._ID + "INTEGER PRIMARY KEY," +
                 MileEntry.DATE_COL + " INTEGER," +
-                MileEntry.MILES_COL + " INTEGER)";
+                MileEntry.GAS_COL + " INTEGER)";
 
     private static final String SQL_CREATE_USER_ENTRIES =
             "CREATE TABLE " + TABLE_NAME_USER + " (" + UserEntry._ID + "INTEGER PRIMARY KEY," +
