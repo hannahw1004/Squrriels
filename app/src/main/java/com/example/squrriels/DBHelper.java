@@ -10,31 +10,50 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DB_Name = "miledb";
     public static final int DB_VERSION = 1;
 
+    public static final String TABLE_NAME_MILE = "miles";
+    public static final String TABLE_NAME_USER = "user";
+
     public static class MileEntry implements BaseColumns {
-        public static final String TABLE_NAME = "miles";
+
         public static final String DATE_COL = "date";
         public static final String MILES_COL = "miles";
     }
 
-    private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + MileEntry.TABLE_NAME + " (" + MileEntry._ID + "INTEGER PRIMARY KEY," +
+    public static class UserEntry implements BaseColumns {
+        public static final String USERNAME_COL = "username";
+        public static final String PASSWORD_COL = "password";
+    }
+
+    private static final String SQL_CREATE_MILES_ENTRIES =
+            "CREATE TABLE " + TABLE_NAME_MILE + " (" + MileEntry._ID + "INTEGER PRIMARY KEY," +
                 MileEntry.DATE_COL + " INTEGER," +
                 MileEntry.MILES_COL + " INTEGER)";
 
-    private static final String SQL_DELETE_ENTRIES =
-            "DROP TABLE IF EXISTS " + MileEntry.TABLE_NAME;
+    private static final String SQL_CREATE_USER_ENTRIES =
+            "CREATE TABLE " + TABLE_NAME_USER + " (" + UserEntry._ID + "INTEGER PRIMARY KEY," +
+                    UserEntry.USERNAME_COL + " TEXT," +
+                    UserEntry.PASSWORD_COL + " TEXT)";
+
+    private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ";
 
     public DBHelper(Context context){
         super(context, DB_Name, null, DB_VERSION);
     }
 
+    public void deleteTable(String tableName){
+        String deleteTableName = SQL_DELETE_ENTRIES + tableName;
+        getWritableDatabase().execSQL(deleteTableName);
+    }
+
     public void onCreate(SQLiteDatabase db){
-        db.execSQL(SQL_CREATE_ENTRIES);
+        db.execSQL(SQL_CREATE_MILES_ENTRIES);
+        db.execSQL(SQL_CREATE_USER_ENTRIES);
     }
 
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        db.execSQL(SQL_DELETE_ENTRIES);
+        deleteTable(SQL_CREATE_MILES_ENTRIES);
+        deleteTable(SQL_CREATE_USER_ENTRIES);
         onCreate(db);
     }
 

@@ -1,53 +1,60 @@
 package com.example.squrriels;
 
+/*import org.apache.poi.openxml4j.opc.OPCPackage;
+import android.content.Context;
 import android.content.res.AssetManager;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class DataReadIn {
 
-    public void readCarData(){
+    public Context context;
+    public DataReadIn(Context context) {
+        this.context = context;
+    }
+
+    public ArrayList<Car> readCarData(){
+        ArrayList<Car> cars = new ArrayList<>();
+
         try{
             InputStream myInput;
-            AssetManager assetManager = getAssets();
-            myInput = assetManager.open("CarData.xlxs");
-            POIFSFileSystem myFileSystem = new POIFSFileSystem(myInput);
+            AssetManager assetManager = context.getAssets();
+            myInput = assetManager.open("FuelEfficiency.xlsx");
 
-            HSSFWorkbook myWorkBook = new HSSFWorkbook(myFileSystem);
+            OPCPackage pkg = OPCPackage.open(myInput);
 
-            HSSFSheet mySheet = myWorkBook.getSheetAt(0);
+            XSSFWorkbook myWorkBook = new XSSFWorkbook(pkg);
+
+            XSSFSheet mySheet = myWorkBook.getSheetAt(0);
 
             Iterator<Row> rowIter = mySheet.rowIterator();
             int rowNum = 0;
 
             while(rowIter.hasNext()){
-                HSSFRow myRow = (HSSFRow) rowIter.next();
+                XSSFRow myRow = (XSSFRow) rowIter.next();
                 if(rowNum != 0){
-                    Iterator<Cell> cellIter = myRow.cellIterator();
                     int colNum = 0;
-                    //number of rows and cols
+                    String brand = myRow.getCell(0).getStringCellValue();
+                    String maker = myRow.getCell(1).getStringCellValue();
+                    double emission = myRow.getCell(2).getNumericCellValue();
 
-                    while(cellIter.hasNext()){
-                        HSSFCell myCell = (HSSFCell) cellIter.next();
-                        if(){
-
-                        }
-                        colNum++;
-                    }
+                    cars.add(new Car(brand, maker, emission));
                 }
                 rowNum++;
             }
+            return cars;
         }catch(Exception e){
-
+            return null;
         }
     }
-}
+} */
