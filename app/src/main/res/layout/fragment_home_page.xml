@@ -11,7 +11,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_track"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:backgroundTint="#4E9258"

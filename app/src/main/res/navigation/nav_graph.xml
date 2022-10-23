@@ -9,5 +9,23 @@
         android:id="@+id/logInPage"
         android:name="com.example.squrriels.LogInPage"
         android:label="fragment_log_in_page"
-        tools:layout="@layout/fragment_log_in_page" />
+        tools:layout="@layout/fragment_log_in_page" >
+        <action
+            android:id="@+id/action_logInPage_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.squrriels.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_inputMiles"
+            app:destination="@id/inputMiles" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputMiles"
+        android:name="com.example.squrriels.InputMiles"
+        android:label="fragment_input_miles"
+        tools:layout="@layout/fragment_input_miles" />
 </navigation>
