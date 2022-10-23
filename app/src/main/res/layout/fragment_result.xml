@@ -23,34 +23,6 @@
 
 
     <TextView
-        android:id="@+id/kgText1"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="228dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/kgText1"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
-
-    <TextView
-        android:id="@+id/carbonDioxide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="236dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/carbon_dioxide"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/resultStatement"
         android:layout_width="205dp"
         android:layout_height="175dp"
@@ -74,8 +46,12 @@
         android:layout_marginBottom="40dp"
         android:backgroundTint="#835C3B"
         android:fontFamily="@font/baloo"
-        android:text="LEARN MORE"
         android:textSize="24sp"
+        android:text="LEARN MORE"
+        android:autoLink="web"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:onClick="goToSite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -105,7 +81,7 @@
         android:fontFamily="@font/baloo"
         android:src="@drawable/happy_face"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,19 +98,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#835C3B"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toEndOf="@+id/learnMore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="124dp"
-        android:text="TextView"
-        android:textSize="20dp"
-        android:fontFamily="@font/baloo"
-        android:textColor="#4E9258"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="312dp"
+        android:text="Less than 20 kg of CO2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

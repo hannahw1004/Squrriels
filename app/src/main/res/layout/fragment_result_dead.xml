@@ -8,49 +8,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/kgText0"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/baloo"
-        android:text="kg"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/carbonDioxide"
-        app:layout_constraintEnd_toStartOf="@+id/kgText2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateIds" />
-
-    <TextView
-        android:id="@+id/kgText4"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/baloo"
-        android:text="kg"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/carbonDioxide"
-        app:layout_constraintEnd_toStartOf="@+id/kgText2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/kgText"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="308dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/baloo"
-        android:text="kg"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/carbonDioxide"
-        app:layout_constraintEnd_toStartOf="@+id/kgText2"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
@@ -80,54 +37,11 @@
         android:layout_height="175dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="188dp"
-        android:layout_marginBottom="14dp"
         android:fontFamily="@font/baloo"
         android:text="You have NOT been environmentally friendly with your gasoline use!"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/emissionText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nitrogenOxide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/baloo"
-        android:text="nitrogen oxide"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
-
-    <TextView
-        android:id="@+id/carbonDioxide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/baloo"
-        android:text="carbon dioxide"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/baloo"
-        android:text="methane"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nitrogenOxide"
-        app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
 
     <Button
         android:id="@+id/learnMore"
@@ -143,20 +57,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/emissionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:fontFamily="@font/baloo"
-        android:text="You emitted a total of"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultStatement2" />
 
     <TextView
         android:id="@+id/congrats"
@@ -182,6 +82,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:text="Over 50 kg of CO2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

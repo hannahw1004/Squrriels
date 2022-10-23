@@ -31,10 +31,37 @@
         <action
             android:id="@+id/action_inputMiles_to_resultHappy"
             app:destination="@id/resultHappy" />
+        <action
+            android:id="@+id/action_inputMiles_to_resultMad"
+            app:destination="@id/resultMad" />
+        <action
+            android:id="@+id/action_inputMiles_to_resultDead"
+            app:destination="@id/resultDead" />
     </fragment>
     <fragment
         android:id="@+id/resultHappy"
         android:name="com.example.squrriels.ResultHappy"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultHappy_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultMad"
+        android:name="com.example.squrriels.ResultMad"
+        android:label="fragment_result_mad2"
+        tools:layout="@layout/fragment_result_mad2" >
+        <action
+            android:id="@+id/action_resultMad_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultDead"
+        android:name="com.example.squrriels.ResultDead"
+        android:label="ResultDead" >
+        <action
+            android:id="@+id/action_resultDead_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
 </navigation>

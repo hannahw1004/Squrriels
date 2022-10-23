@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 
 public class InputMiles extends Fragment {
     double gallons = 0;
+    double carbonDioxide = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,6 @@ public class InputMiles extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-                NavHostFragment.findNavController(InputMiles.this)
-                        .navigate(R.id.action_inputMiles_to_resultHappy);
-
                 EditText txtCarBrand = getActivity().findViewById(R.id.txt_car_brand);
                 EditText txtCarModel = getActivity().findViewById(R.id.txt_car_model);
                 EditText txtMiles = getActivity().findViewById(R.id.txt_miles);
@@ -60,13 +58,28 @@ public class InputMiles extends Fragment {
 
                 for(int i = 0; i < cars.size(); i++){
                     Car currentCar = cars.get(i);
-                    if(brand.equalsIgnoreCase(currentCar.brand) && model.equalsIgnoreCase(currentCar.maker)){
+                    String car = currentCar.brand;
+                    String maker = currentCar.maker;
+                    if(brand.equalsIgnoreCase(car) && model.equalsIgnoreCase(maker)){
                         gallons = mile / currentCar.emission;
                     }else{
-                        Snackbar.make(view, "Please write another car type", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+
                     }
                 }
+
+                carbonDioxide = gallons * 8.8887;
+
+                if(carbonDioxide <= 20){
+                    NavHostFragment.findNavController(InputMiles.this)
+                           .navigate(R.id.action_inputMiles_to_resultHappy);
+                }else if(carbonDioxide < 50){
+                    NavHostFragment.findNavController(InputMiles.this)
+                            .navigate(R.id.action_inputMiles_to_resultMad);
+                }else if (carbonDioxide >= 50){
+                    NavHostFragment.findNavController(InputMiles.this)
+                            .navigate(R.id.action_inputMiles_to_resultDead);
+                }
+
                 txtCarBrand.setText("");
                 txtCarModel.setText("");
                 txtMiles.setText("");

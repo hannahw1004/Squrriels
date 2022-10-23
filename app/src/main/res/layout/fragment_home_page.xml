@@ -9,39 +9,32 @@
     tools:layout_editor_absoluteY="25dp">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <Button
         android:id="@+id/btn_track"
         android:layout_width="350dp"
         android:layout_height="80dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginTop="424dp"
         android:backgroundTint="#4E9258"
         android:fontFamily="@font/baloo"
         android:text="Track Emissions"
         android:textSize="23dp"
         app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
-
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="340dp"
-        android:layout_height="241dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="90dp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
         android:src="@drawable/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -51,12 +44,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/baloo"
         android:text="Welcome!"
         android:textColor="#4E9258"
         android:textSize="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="392dp"
+        android:src="@drawable/greensprouts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

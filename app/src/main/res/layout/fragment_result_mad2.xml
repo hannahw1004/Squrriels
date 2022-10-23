@@ -21,92 +21,6 @@ tools:context=".ResultMad">
     android:contentDescription="@string/todo2" />
 
     <TextView
-        android:id="@+id/kgText3"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="4dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/kgText3"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/nitrogenOxide"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toEndOf="@+id/kgText2" />
-
-    <TextView
-        android:id="@+id/kgText1"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="4dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/kgText1"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/carbonDioxide"
-        app:layout_constraintEnd_toStartOf="@+id/kgText2"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/kgText2"
-        android:layout_width="42dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="4dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/kgText2"
-        android:textColor="#4E9258"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/methane"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/nitrogenOxide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="240dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/nitrogen_oxide"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
-
-    <TextView
-        android:id="@+id/carbonDioxide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="240dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/carbon_dioxide"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/methane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="240dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/methane"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nitrogenOxide"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toEndOf="@+id/carbonDioxide" />
-
-    <TextView
         android:id="@+id/resultStatement"
         android:layout_width="213dp"
         android:layout_height="151dp"
@@ -140,21 +54,6 @@ tools:context=".ResultMad">
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/emissionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="100dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/you_emitted_a_total_of"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultStatement" />
-
-    <TextView
         android:id="@+id/messageMad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -178,6 +77,17 @@ tools:context=".ResultMad">
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/todo3"
         tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="284dp"
+        android:text="20-50 kg of CO2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
