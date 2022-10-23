@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/baloo"
-        android:text="Car Year"
+        android:text="Todays date"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintHorizontal_bias="0.542"
