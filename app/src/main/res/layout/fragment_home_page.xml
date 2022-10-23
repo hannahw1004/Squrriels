@@ -14,6 +14,7 @@
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="340dp"
+        android:layout_marginBottom="148dp"
         android:backgroundTint="#4E9258"
         android:fontFamily="@font/baloo"
         android:text="Track Emissions"
@@ -24,6 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -41,8 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
